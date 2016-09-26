@@ -1,0 +1,21 @@
+{
+	"name": "NodejsStarterApp",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node app.js"
+		},
+	"dependencies": {
+		"express": "4.13.x",
+		"cfenv": "1.0.x",
+		"request": "2.75.0",
+		"cloudant": "1.4.x",
+		"underscore": "1.8.x",
+		"dateformat": "1.0.12"
+	},
+	"repository": {},
+	"engines": {
+		"node": "4.x"
+	} 
+}
