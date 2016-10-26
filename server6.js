@@ -23,11 +23,11 @@ jsonfile.readFile(file, function(err, obj) {
   //console.log(repository);
 
 					var options = {
-									headers:{'X-JFrog-Art-Api':'AKCp2V6JPkDwUnzcJXehWzLNX5SJQMi7rQQTNiw8cuKYzjjP9t9F6u5jvwCE6kHgJrA9ihGAg'}
+									headers:{'X-JFrog-Art-Api':''}
 											 
 								  }
 					process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-					var https_request = syncRequest('GET','https://169.50.113.178:8443/artifactory/api/search/dates?dateFields=created,lastModified,lastDownloaded&from=2016-10-19T00:17:20.000Z&repos='+repository+'',options);
+					var https_request = syncRequest('GET','https://artifactory/api/search/dates?dateFields=created,lastModified,lastDownloaded&from=2016-10-19T00:17:20.000Z&repos='+repository+'',options);
 					//var res_Refresh_Token = syncRequest('GET','https://169.50.113.178:8443/artifactory/api/search/dates?dateFields=created,lastModified,lastDownloaded&from=2016-10-19T00:17:20.000Z,options);
 					https_request = JSON.parse(https_request.getBody('utf8'));
 					DataObject_count=https_request.results.length;
