@@ -11,7 +11,7 @@ var request = require("request");
 // };
  process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 //console.log('=> %s', curl_command);
-var curl_command = curl.cmd({host: '169.50.113.30', port: 8443, method: 'GET', path: '/api/v3/projects/2/repository/commits',headers: {"PRIVATE-TOKEN": "1fkBozzsNVEbcBu9oQhu"} }, {ssl: true})
+var curl_command = curl.cmd({host: '', port: 8443, method: 'GET', path: '/api/v3/projects/2/repository/commits',headers: {"PRIVATE-TOKEN": ""} }, {ssl: true})
 console.log('=> %s', curl_command);
 https.request(curl_command, function(res) {
   console.log('STATUS: ' + res.statusCode);
