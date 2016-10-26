@@ -1,25 +1,3 @@
-
-//----------------------------------------------------------------------README----------------------------------------------------------------------------------------------------------------------------------------
-
-
-//This code pulls the list of artifacts in the artifactory and gives the count of no of artifacts in the format given below
-//{ Artifactory_Repository_Name: 'libs-snapshot-local',
-//Tool_Name: 'Artifactory',
-//Ip: '169.50.113.178',
-//Timestamp: '2016-10-13 12:50:33',
-//Artifacts_Count: 2,
-//DataObject:
-//   [ { uri: 'https://169.50.113.178:8443/artifactory/api/storage/libs-snapshot-local/com/mycompany/app/my-app/1.0-SNAPSHOT/my-app-1.0-20161012.073859-1.jar',
-  //     created: '2016-10-12T07:38:59.076Z',
-    //   lastModified: '2016-10-13T06:10:05.000Z',
-      // lastDownloaded: '' },
-    // { uri: 'https://169.50.113.178:8443/artifactory/api/storage/libs-snapshot-local/org/sonarqube/example-ut-maven-cobertura/1.0-SNAPSHOT/example-ut-maven-cobertura-1.0-20160926.045818-1.jar',
-     //  created: '2016-09-26T04:58:18.457Z',
-      // lastModified: '2016-10-13T06:13:36.000Z',
-      // lastDownloaded: '' } ] }
-
-//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 //http module
 var http= require('https');
 var dateFormat = require('dateformat');
@@ -31,7 +9,7 @@ var timestamp=date.format(now, 'YYYY-MM-DD HH:mm:ss');
 var repository= 'libs-snapshot-local';
 //console.log(searchdate);
 var options = {
-	headers:{'X-JFrog-Art-Api':'AKCp2V6JPkDwUnzcJXehWzLNX5SJQMi7rQQTNiw8cuKYzjjP9t9F6u5jvwCE6kHgJrA9ihGAg'},
+	headers:{'X-JFrog-Art-Api':''},
 	method:'GET',
 	host:'169.50.113.178',
 	port: 8443,
